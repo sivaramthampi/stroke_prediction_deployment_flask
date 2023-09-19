@@ -59,6 +59,8 @@ body{
     border-radius: 30px;
     background-color: hsl(0, 0%, 100%,20%);
     border-radius: 0.5rem;
+    padding: 10px;
+    float: left;
 }
 .inputformborder::before,
 .inputformborder::after{
