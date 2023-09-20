@@ -5,6 +5,11 @@
     --clr-4:#f1736e;
     --clr-5:#cc79dd;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 
 body{
@@ -39,7 +44,7 @@ body{
 .inputformborder
 {
     width: 700px;
-    height: 500px;
+    height: 530px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -51,7 +56,7 @@ body{
 }
 .inputformbox{
     width: 700px;
-    height: 500px;
+    height: 530px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -60,7 +65,6 @@ body{
     background-color: hsl(0, 0%, 100%,20%);
     border-radius: 0.5rem;
     padding: 10px;
-    float: left;
 }
 .inputformborder::before,
 .inputformborder::after{
@@ -92,4 +96,62 @@ body{
 #main-head{
     color: rgb(19, 6, 41);
     font-weight: 200;
+}
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(23, 7, 51);
+}
+.form-items{
+    margin-top: 10px;
+}
+
+#name-f, #age-f, #agl-f, #bmi-f{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid rgb(49, 49, 49);
+    color: rgb(39, 2, 28);
+    background-color: hsla(0, 9%, 98%, 0.514);
+    
+}
+::placeholder { 
+    color:  rgb(23, 7, 51);
+    font-size: 13px;
+  }
+
+#gender-f{
+    margin-left: 500px;
+}
+
+#male, #female, #other{
+    margin-left: 29px;
+    height: 11px;
+    
+}
+#hypertension_yes,#hypertension_no,#evermarried_yes,#evermarried_no,#heartdisease_yes,#heartdisease_no,#urban{
+    margin-left: 70px;
+    height: 11px;
+}
+#rural{
+    height: 11px;
+    margin-left: 52px;
+}
+#worktype,#smokingstatus{
+    width: 150px;
+    margin-left: 75px;
+    text-align: center;
+    background-color: hsla(0, 9%, 98%, 0.514);
+}
+label{
+    font-size: smaller;
+}
+#predict-f{
+    margin-top: 20px;
+    width: 200px;
+    margin-left: 50px;
+    background-color: hsla(118, 68%, 36%, 0.514);
 }

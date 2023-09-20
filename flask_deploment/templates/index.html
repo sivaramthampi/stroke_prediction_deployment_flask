@@ -17,29 +17,57 @@
         <div class="inputformborder">
             <div class='inputformbox'>
                 <form action="" method="post">
-                    <input type="text" name="name" placeholder="Enter your name">
+                    <input type="text" name="name" placeholder="Enter your name" class="form-items" id="name-f">
                     <br>
-                    <input type="radio" id="male" name="gender" value="Male">
+                    <input type="radio" id="male" name="gender" value="Male" class="form-items">
                     <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="Female">
+                    <input type="radio" id="female" name="gender" value="Female" class="form-items">
                     <label for="female">Female</label>
-                    <input type="radio" id="other" name="gender" value="Other">
+                    <input type="radio" id="other" name="gender" value="Other" class="form-items">
                     <label for="other">Other</label>
                     <br>
-                    <input type="number" name="age" placeholder="Enter your age">
+                    <input type="number" name="age" placeholder="Enter your age" class="form-items" id="age-f">
                     <br>
-                    <input type="radio" id="hypertension_yes" name="hypertension" value="1">
+                    <input type="radio" id="hypertension_yes" name="hypertension" value="1" class="form-items">
                     <label for="hypertension_yes">Yes</label>
-                    <input type="radio" id="hypertension_no" name="hypertension" value="0">
+                    <input type="radio" id="hypertension_no" name="hypertension" value="0" class="form-items">
                     <label for="hypertension_no">No</label>
                     <br>
-                    <input type="radio" id="evermarried_yes" name="evermarried" value="Yes">
+                    <input type="radio" id="heartdisease_yes" name="heartdisease" value="1" class="form-items">
+                    <label for="heartdisease_yes">Yes</label>
+                    <input type="radio" id="heartdisease_no" name="heartdisease" value="0" class="form-items">
+                    <label for="heartdisease_no">No</label>
+                    <br>
+                    <input type="radio" id="evermarried_yes" name="evermarried" value="Yes" class="form-items">
                     <label for="evermarried_yes">Yes</label>
-                    <input type="radio" id="evermarried_no" name="evermarried" value="No">
+                    <input type="radio" id="evermarried_no" name="evermarried" value="No" class="form-items">
                     <label for="evermarried_no">No</label>
-
-                    
-
+                    <br>
+                    <select name="worktype" id="worktype" class="form-items">
+                        <option value="Private">Private</option>
+                        <option value="Self-employed">Self-employed</option>
+                        <option value="Govt_job">Govt job</option>
+                        <option value="children">children</option>
+                        <option value="Never_worked">Never worked</option>
+                    </select>
+                    <br>
+                    <input type="radio" id="urban" name="residencetype" value="Urban" class="form-items">
+                    <label for="urban">Urban</label>
+                    <input type="radio" id="rural" name="residencetype" value="Rural" class="form-items">
+                    <label for="rural">Rural</label>
+                    <br>
+                    <input type="number" name="avg_glucose_level" placeholder="Enter your Average Glucose Level" class="form-items" id="agl-f">
+                    <br>
+                    <input type="number" name="bmi" placeholder="Enter your BodyMass" class="form-items" id="bmi-f">
+                    <br>
+                    <select name="smokingstatus" id="smokingstatus" class="form-items">
+                        <option value="smokes">Smokes</option>
+                        <option value="never smoked">never smoked</option>
+                        <option value="formerly smoked">Formerly Smoked</option>
+                        <option value="Unknown">Unknown</option>
+                    </select>
+                    <br>
+                    <button type="submit" class="btn btn-success" id="predict-f">Predict</button>
                 </form>
             </div>
         </div>
