@@ -95,7 +95,7 @@ body{
 
 #main-head{
     color: rgb(19, 6, 41);
-    font-weight: 200;
+    font-weight: 500;
 }
 
 form{
@@ -132,17 +132,27 @@ form{
     height: 11px;
     
 }
-#hypertension_yes,#hypertension_no,#evermarried_yes,#evermarried_no,#heartdisease_yes,#heartdisease_no,#urban{
-    margin-left: 70px;
+#hypertension_yes,#hypertension_no,#evermarried_yes,#evermarried_no,#urban{
+    margin-left: 50px;
+    height: 11px;
+}
+#heartdisease_yes,#heartdisease_no{
+    margin-left: 45px;
     height: 11px;
 }
 #rural{
     height: 11px;
-    margin-left: 52px;
+    margin-left: 32px;
 }
-#worktype,#smokingstatus{
+#worktype{
     width: 150px;
     margin-left: 75px;
+    text-align: center;
+    background-color: hsla(0, 9%, 98%, 0.514);
+}
+#smokingstatus{
+    width: 150px;
+    margin-left: 50px;
     text-align: center;
     background-color: hsla(0, 9%, 98%, 0.514);
 }
@@ -154,4 +164,10 @@ label{
     width: 200px;
     margin-left: 50px;
     background-color: hsla(118, 68%, 36%, 0.514);
+}
+p{
+    margin-left: 40px;
+}
+label{
+    color: #200529;
 }
