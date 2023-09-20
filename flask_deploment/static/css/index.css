@@ -57,7 +57,7 @@ body{
 .inputformbox{
     width: 700px;
     height: 530px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -69,7 +69,7 @@ body{
 .inputformborder::before,
 .inputformborder::after{
     content: "";
-    position: absolute;
+    position: fixed;
     inset:-1rem;
     z-index: -1;
     background: linear-gradient(
@@ -95,7 +95,10 @@ body{
 
 #main-head{
     color: rgb(19, 6, 41);
-    font-weight: 500;
+    font-weight: 200;
+    position: fixed;
+    bottom: 535px;
+    margin-left: 200px;
 }
 
 form{
@@ -149,12 +152,14 @@ form{
     margin-left: 75px;
     text-align: center;
     background-color: hsla(0, 9%, 98%, 0.514);
+    border-radius: 5px;
 }
 #smokingstatus{
     width: 150px;
     margin-left: 50px;
     text-align: center;
     background-color: hsla(0, 9%, 98%, 0.514);
+    border-radius: 5px;
 }
 label{
     font-size: smaller;

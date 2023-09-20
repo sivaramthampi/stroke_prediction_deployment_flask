@@ -12,11 +12,13 @@
     {% endblock %}
 </head>
 <body >
+    
     <div class="animated-background" style="padding-top:33px">
-        <h1 id="main-head" align='center'>Stroke Predictor</h1>
+        
         <div class="inputformborder">
+            <h1 id="main-head" align='center'>Stroke Predictor</h1>
             <div class='inputformbox'>
-                <form action="" method="post">
+                <form action="/prediction" method="post">
                     <input type="text" name="name" placeholder="Enter your name" class="form-items" id="name-f">
                     <br>
                     <label for="gender">Gender:</label>
@@ -64,7 +66,7 @@
                     <br>
                     <input type="number" name="avg_glucose_level" placeholder="Enter your Average Glucose Level" class="form-items" id="agl-f">
                     <br>
-                    <input type="number" name="bmi" placeholder="Enter your BodyMass" class="form-items" id="bmi-f">
+                    <input type="number" name="bmi" placeholder="Enter your BMI" class="form-items" id="bmi-f">
                     <br>
                     <label for="smokingstatus">Smoking Status:</label>
                     <select name="smokingstatus" id="smokingstatus" class="form-items">
