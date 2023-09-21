@@ -24,13 +24,21 @@ def prediction():
     # Pickle Extraction
     with open('..\\data\\trainedstrokemodel.pkl','rb') as mf:
         pickle_file = pickle.load(mf)
+    with open('..\\data\\trainedlabelencoders.pkl','rb') as ef:
+        label_encoders = pickle.load(ef)
+    encoder = label_encoders
     model = pickle_file['model']
     scaler = pickle_file['scaler']
+
+    # Model Initialization and Pre-processing
     columns = ['id','gender','age','hypertension','heart_disease','ever_married','work_type','Residence_type','avg_glucose_level','bmi','smoking_status']
     df = pd.DataFrame([[idd,gender,age,hypertension,heartdisease,evermarried,worktype,residencetype,avg_glucose_level,bmi,smoking_status]],columns=columns)
-    # df = pd.get_dummies(df,columns=['gender','ever_married','Residence_type','work_type','smoking_status'],dtype='int64')
-    print(df.shape)
-
+    dtype_dict = {'id':int,'age':float,'hypertension':int,'heart_disease':int,'avg_glucose_level':float,'bmi':float} 
+    df = df.astype(dtype_dict)
+    for col in df.select_dtypes(include=['object']):
+        df[col] = encoder[col].transform(df[col])
+    scaled = scaler.transform(df)
+    prediction = model.predict(scaled)
     dicto = {
     'gender':gender,
     'age':age,
@@ -44,7 +52,7 @@ def prediction():
     'smoking_status' : smoking_status
     }
 
-    return render_template('prediction.html',res=dicto)
+    return render_template('prediction.html',res=dicto,predicted=prediction)
 
 if __name__ == "__main__":
     app.run(debug=True)
