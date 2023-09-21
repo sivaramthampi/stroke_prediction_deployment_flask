@@ -17,7 +17,13 @@
     {% endfor %}
         <br>
         <br>
-    <h1>{{predicted}}</h1>
+    <h1>{% if predicted[0] == 1 %}
+        {{"You have chances of stroke"}}
+        {% else %}
+        {{"You are healthy"}}
+        {% endif %}
+
+    </h1>
 
     </h1>
     </div>
